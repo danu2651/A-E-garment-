@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- A&E Logo / Favicon -->
+  <link rel="icon" type="image/png" href="A&E logo.png">
+  <link rel="apple-touch-icon" href="A&E logo.png">
+
+  <meta name="description" content="A&E Garment and Advertising and Technology P.L.C. — professional garment manufacturing and embroidery solutions in Ethiopia.">
+
+  <title>A&E Garment | Garment & Embroidery Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+  <style>
+    :root{
+      --red:#b51f2a;
+      --red-dark:#7e111b;
+      --red-light:#c85a50;
+      --ink:#171717;
+      --text:#242222;
+      --muted:#74706d;
+      --paper:#f8f7f4;
+      --white:#fff;
+      --line:rgba(23,23,23,.12);
+      --max:1280px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--text);line-height:1.55;overflow-x:hidden}
+    img{display:block;width:100%;object-fit:cover}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit;border:0;cursor:pointer}
+    ::selection{background:var(--red);color:#fff}
+
+    .container{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .section{padding:120px 0}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--red);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
+    .eyebrow:before{content:"";width:30px;height:2px;background:var(--red)}
+    .title{font-size:clamp(42px,6vw,82px);line-height:.98;letter-spacing:-.055em;font-weight:600}
+    .serif{font-family:"Playfair Display",serif;font-style:italic;font-weight:500}
+    .muted{color:var(--muted)}
+
+    /* loader */
+    /* =========================================
+   A&E PREMIUM LOADER
+========================================= */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.9s cubic-bezier(.77,0,.18,1),
+    visibility 0.9s;
+}
+
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* Main loader content */
+
+.loader-content {
+  position: relative;
+  width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Logo container */
+
+.loader-logo-wrap {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  animation: logoEntrance 1.2s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+
+/* Logo */
+
+.loader-logo {
+  width: 125px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+  position: relative;
+  z-index: 3;
+
+  animation:
+    logoFloat 3s ease-in-out infinite,
+    logoGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ANIMATED RINGS
+========================================= */
+
+.loader-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(181,31,42,.15);
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.ring-one {
+  width: 135px;
+  height: 135px;
+
+  animation: ringPulse 2.5s ease-out infinite;
+}
+
+.ring-two {
+  width: 165px;
+  height: 165px;
+
+  animation: ringPulse 2.5s ease-out infinite .8s;
+}
+
+
+/* =========================================
+   LOGO ANIMATIONS
+========================================= */
+
+@keyframes logoEntrance {
+
+  0% {
+    opacity: 0;
+    transform: scale(.65) translateY(15px);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+@keyframes logoFloat {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+@keyframes logoGlow {
+
+  0%,100% {
+    filter: drop-shadow(0 0 0 rgba(181,31,42,0));
+  }
+
+  50% {
+    filter: drop-shadow(0 8px 20px rgba(181,31,42,.18));
+  }
+}
+
+
+@keyframes ringPulse {
+
+  0% {
+    opacity: .7;
+    transform: translate(-50%, -50%) scale(.75);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+
+/* =========================================
+   A&E NAME
+========================================= */
+
+.loader-name {
+
+  margin-top: 8px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  letter-spacing: .28em;
+
+  color: #b51f2a;
+
+  padding-left: .28em;
+
+  opacity: 0;
+
+  animation:
+    textReveal .8s ease forwards 0.65s;
+}
+
+
+.loader-sub {
+
+  margin-top: 7px;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: .18em;
+
+  color: #888;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  animation:
+    textReveal .8s ease forwards 0.9s;
+}
+
+
+@keyframes textReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.loader-progress {
+
+  width: 150px;
+  height: 2px;
+
+  margin-top: 25px;
+
+  background: rgba(181,31,42,.12);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+.loader-progress span {
+
+  display: block;
+
+  width: 0%;
+  height: 100%;
+
+  background: #b51f2a;
+
+  position: relative;
+
+  animation:
+    loaderProgress 2.2s cubic-bezier(.65,0,.35,1) forwards;
+}
+
+
+.loader-progress span::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 40px;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.9),
+    transparent
+  );
+
+  animation: progressShine 1s linear infinite;
+}
+
+
+@keyframes loaderProgress {
+
+  0% {
+    width: 0%;
+  }
+
+  25% {
+    width: 25%;
+  }
+
+  55% {
+    width: 62%;
+  }
+
+  80% {
+    width: 84%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+@keyframes progressShine {
+
+  from {
+    transform: translateX(-40px);
+  }
+
+  to {
+    transform: translateX(40px);
+  }
+}
+
+
+/* =========================================
+   PERCENTAGE
+========================================= */
+
+.loader-percent {
+
+  margin-top: 9px;
+
+  font-size: 9px;
+
+  color: #aaa;
+
+  letter-spacing: .12em;
+}
+
+    /* nav */
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 0;transition:.35s}
+    .nav.scrolled{background:rgba(23,23,23,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;letter-spacing:-.06em}
+    .logo-mark{width:38px;height:38px;border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;font-size:11px;letter-spacing:-.08em}
+    .nav-links{display:flex;align-items:center;gap:30px;color:#eee;font-size:13px}
+    .nav-links a{opacity:.85;transition:.25s}
+    .nav-links a:hover{color:#fff;opacity:1}
+    .nav-cta{padding:11px 17px;border:1px solid rgba(255,255,255,.35)}
+    .nav-cta:hover{background:var(--red);border-color:var(--red)}
+    .menu{display:none;background:none;color:#fff;font-size:25px}
+    .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+    /* hero */
+   .hero{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  background:var(--ink);
+  color:#fff;
+  overflow:hidden;
+}
+
+/* Background stays behind everything */
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+/* Individual slides */
+.hero-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  z-index:0;
+  transition:opacity 1.5s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+  z-index:1;
+}
+
+/* Images */
+.hero-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Dark overlay ABOVE image */
+.hero-slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(
+    90deg,
+    rgba(23,23,23,.88) 0%,
+    rgba(23,23,23,.60) 48%,
+    rgba(23,23,23,.20) 100%
+  );
+}
+
+/* Hero content ALWAYS above images */
+.hero-content{
+  position:relative;
+  z-index:10;
+  width:100%;
+  padding:160px 0 75px;
+}
+
+/* Scroll indicator */
+.scroll{
+  position:absolute;
+  z-index:20;
+}
+   .hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:linear-gradient(
+    transparent 55%,
+    rgba(0,0,0,.35)
+  );
+  pointer-events:none;
+}
+    .hero-content{position:relative;z-index:2;width:100%;padding:160px 0 75px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:end}
+    .hero-kicker{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:25px}
+    .hero-title{font-size:clamp(65px,9.5vw,140px);line-height:.82;letter-spacing:-.075em;font-weight:600}
+    .hero-title em{color:#f1b1b5;font-family:"Playfair Display",serif}
+    .hero-copy{max-width:450px;color:#ddd;margin-bottom:28px;font-size:15px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 22px;border:1px solid rgba(255,255,255,.35);position:relative;overflow:hidden;transition:.3s;z-index:1}
+    .btn:before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(102%);transition:.35s;z-index:-1}
+    .btn:hover:before{transform:translateY(0)}
+    .btn:hover{border-color:var(--red)}
+    .btn-primary{background:var(--red);border-color:var(--red)}
+    .btn-primary:before{background:var(--red-dark)}
+    .hero-badge{border-left:1px solid rgba(255,255,255,.3);padding-left:22px;color:#ddd;font-size:12px;line-height:1.8}
+    .hero-badge strong{display:block;color:#fff;font-size:28px;letter-spacing:-.04em}
+    .scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);z-index:3;color:#aaa;font-size:9px;text-transform:uppercase;letter-spacing:.2em;display:flex;flex-direction:column;align-items:center;gap:8px}
+    .scroll i{height:40px;width:1px;background:linear-gradient(#fff,transparent);animation:pulse 1.7s infinite}
+    @keyframes pulse{50%{transform:translateY(8px);opacity:.3}}
+
+    /* marquee */
+    .marquee{background:var(--red);color:#fff;overflow:hidden;padding:19px 0}
+    .track{display:flex;width:max-content;animation:marquee 25s linear infinite}
+    .track span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding-right:34px}
+    .track b{padding-right:34px;font-size:16px}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    /* about */
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center}
+    .about-image{height:620px;overflow:hidden;position:relative}
+    .about-image img{height:100%;transition:transform .8s}
+    .about-image:hover img{transform:scale(1.05)}
+    .image-tag{position:absolute;left:20px;bottom:20px;background:#fff;padding:10px 14px;color:var(--red);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    .about-copy p{max-width:650px;color:var(--muted);font-size:17px;line-height:1.85;margin-top:30px}
+    .about-copy .link{display:inline-block;margin-top:28px;color:var(--red);font-weight:600;border-bottom:1px solid var(--red);padding-bottom:5px}
+
+    /* stats */
+    .stats{margin-top:90px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stat{padding:32px 20px;border-right:1px solid var(--line)}
+    .stat:last-child{border:0}
+    .stat-number{font-size:50px;line-height:1;letter-spacing:-.06em;font-weight:600;color:var(--red)}
+    .stat-label{margin-top:10px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+
+   /* services */
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:50px;
+  margin-bottom:65px;
+}
+
+.intro{
+  max-width:350px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.services{
+  border-top:1px solid var(--line);
+}
+
+.service{
+  display:grid;
+  grid-template-columns:65px 1fr 1fr 50px;
+  align-items:center;
+  min-height:125px;
+  border-bottom:1px solid var(--line);
+  padding:0 5px;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:.45s ease;
+}
+
+/* Background image layer */
+
+.service::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:var(--service-image);
+  background-size:cover;
+  background-position:center;
+
+  opacity:0;
+
+  transform:scale(1.08);
+
+  transition:
+    opacity .45s ease,
+    transform .7s ease;
+
+  z-index:0;
+}
+
+/* Dark overlay */
+
+.service::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    90deg,
+    rgba(20,20,20,.88),
+    rgba(20,20,20,.65)
+  );
+
+  opacity:0;
+
+  transition:.45s ease;
+
+  z-index:1;
+}
+
+/* Keep content above image */
+
+.service > *{
+  position:relative;
+  z-index:2;
+}
+
+/* Hover */
+
+.service:hover{
+  padding-left:22px;
+  padding-right:22px;
+
+  color:#fff;
+}
+
+.service:hover::before{
+  opacity:1;
+  transform:scale(1);
+}
+
+.service:hover::after{
+  opacity:1;
+}
+
+.service:hover .service-no,
+.service:hover .service-desc{
+  color:#eee;
+}
+
+.service:hover .service-arrow{
+  background:var(--red);
+  color:#fff;
+  border-color:var(--red);
+
+  transform:rotate(-45deg);
+}
+
+.service-no{
+  font-size:11px;
+  color:var(--red);
+  transition:.35s;
+}
+
+.service-name{
+  font-size:clamp(24px,3vw,39px);
+  letter-spacing:-.04em;
+}
+
+.service-desc{
+  font-size:13px;
+  color:var(--muted);
+  max-width:340px;
+
+  transition:.35s;
+}
+
+.service-arrow{
+  width:40px;
+  height:40px;
+
+  border:1px solid var(--line);
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  transition:.35s;
+}
+    /* capability */
+    .capability{background:var(--ink);color:#fff}
+    .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .cap-image{
+  height:620px;
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+}
+
+.cap-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .8s ease;
+}
+
+.cap-image:hover img{
+  transform:scale(1.05);
+}
+
+/* =========================================
+   CUSTOMER FEEDBACK
+========================================= */
+
+.feedback {
+  background:  #F3F0EC;
+  padding: 80px 0;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Left */
+
+.feedback-intro .title {
+  margin-bottom: 15px;
+}
+
+.feedback-intro p {
+  margin-top: 12px;
+  line-height: 1.7;
+}
+/* Main heading */
+.feedback .title {
+  color: #1B1B1B;
+}
+
+/* Highlight / italic word */
+.feedback .title .serif {
+  color: var(--red);
+}
+
+/* Description */
+.feedback-intro p {
+  color: #6F6B66;
+}
+
+/* Small rating label */
+.rating-label {
+  color: #1B1B1B;
+}
+
+/* Rating */
+
+.rating-box {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.star {
+  font-size: 30px;
+}
+
+/* Right Form */
+
+.feedback-form-wrap {
+  padding: 32px 38px;
+}
+
+.feedback-form {
+  margin-top: 22px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group textarea {
+  min-height: 75px;
+}
+
+.feedback-btn {
+  padding: 14px 22px;
+}
+
+/* Rating */
+
+.rating-box {
+  margin-top: 55px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+.rating-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .18em;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 38px;
+  color: #c8c3bd;
+  transition: color .25s ease, transform .25s ease;
+}
+
+.star:hover,
+.star.active {
+  color: var(--red);
+  transform: translateY(-4px);
+}
+
+.rating-text {
+  margin-top: 14px !important;
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* Form */
+
+.feedback-form-wrap {
+  background: #fff;
+  padding: 50px;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.form-heading span {
+  font-size: 10px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.form-heading p {
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+.feedback-form {
+  margin-top: 35px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  letter-spacing: .04em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  background: transparent;
+  padding: 12px 0;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color .3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+}
+
+/* Button */
+
+.feedback-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background: var(--red);
+  color: #fff;
+  padding: 17px 25px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.feedback-btn span {
+  transition: transform .3s ease;
+}
+
+.feedback-btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-3px);
+}
+
+.feedback-btn:hover span {
+  transform: translate(4px,-4px);
+}
+
+
+/* Mobile */
+
+@media(max-width:800px) {
+
+  .feedback {
+    padding: 90px 0;
+  }
+
+  .feedback-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .feedback-form-wrap {
+    padding: 30px 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* SPECIAL A&E RED CORNER */
+
+.cap-corner{
+  position:absolute;
+  top:0;
+  right:0;
+
+  width:110px;
+  height:110px;
+
+  background:var(--red-dark);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:2;
+
+  border-top-right-radius:24px;
+}
+
+.cap-corner span{
+  color:#fff;
+
+  font-size:12px;
+  font-weight:700;
+
+  letter-spacing:.15em;
+
+  writing-mode:vertical-rl;
+
+  transform:rotate(360deg);
+}
+    .cap-copy p{color:#aaa;max-width:600px;margin-top:28px;line-height:1.8}
+    .cap-list{margin-top:35px;border-top:1px solid rgba(255,255,255,.14)}
+    .cap-item{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:13px}
+    .cap-item strong{color:#fff}
+    .cap-item span{color:#aaa;text-align:right}
+
+    /* process */
+    .process-wrap{background:#eeeae5;overflow:hidden}
+    .process-scroll{overflow-x:auto;scrollbar-width:none;cursor:grab}
+    .process-scroll::-webkit-scrollbar{display:none}
+    .process-track{display:flex;width:max-content;gap: 16px;}
+    .process-card {border-radius: 8px;overflow: hidden;}
+    .process-card{width:390px;height:520px;position:relative;border-right:1px solid rgba(23,23,23,.12);overflow:hidden}
+    .process-card img{position:absolute;inset:0;height:100%;transition:.8s}
+    .process-card:hover img{transform:scale(1.06)}
+    .process-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.88))}
+    .process-info{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;color:#fff}
+    .process-no{color:#f1b1b5;font-size:10px;margin-bottom:10px}
+    .process-title{font-size:30px;letter-spacing:-.04em}
+    .process-card h3 {transition: color .35s ease;}
+    .process-card:hover h3 {color: var(--red);}
+    .process-info p{font-size:12px;color:#ddd;margin-top:8px;max-width:300px}
+    
+    /* embroidery */
+    .embroidery{background:#fff}
+    .emb-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .emb-copy p{color:var(--muted);max-width:600px;margin-top:28px;line-height:1.8}
+    .emb-image{height:500px;overflow:hidden}
+    .emb-image img{height:100%;transition:.8s}
+    .emb-image:hover img{transform:scale(1.05)}
+    /* Discuss embroidery project hover */
+
+.emb-copy .link {
+  position: relative;
+  display: inline-block;
+  transition: color .35s ease, transform .35s ease;
+}
+
+.emb-copy .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  transition: width .4s ease;
+}
+
+.emb-copy .link:hover {
+  color: var(--red);
+  transform: translateX(6px);
+}
+
+.emb-copy .link:hover::after {
+  width: 100%;
+}
+
+    /* gallery */
+    .gallery-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:55px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{background:transparent;border:1px solid var(--line);padding:9px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);transition:.25s}
+    .filter.active,.filter:hover{background:var(--red);color:#fff;border-color:var(--red)}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .gallery-item{height:470px;position:relative;overflow:hidden}
+    .gallery-item:nth-child(1){grid-column:span 7}
+    .gallery-item:nth-child(2){grid-column:span 5}
+    .gallery-item:nth-child(3){grid-column:span 5}
+    .gallery-item:nth-child(4){grid-column:span 7}
+    .gallery-item img{height:100%;transition:.8s}
+    .gallery-item:hover img{transform:scale(1.06)}
+    .gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.75))}
+    .gallery-info{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;color:#fff;display:flex;justify-content:space-between;align-items:end}
+    .gallery-info small{display:block;color:#f1b1b5;font-size:9px;text-transform:uppercase;letter-spacing:.15em}
+    .gallery-info h3{font-size:22px;margin-top:4px}
+    .gallery-item.hide{display:none}
+
+    /* vision */
+    .vision{background:var(--red);color:#fff}
+    .vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+    .vision .eyebrow{color:#ffd8da}
+    .vision .eyebrow:before{background:#ffd8da}
+    .vision h2{font-size:clamp(42px,6vw,78px);line-height:1}
+    .vision p{color:#ffe7e8;margin-top:25px;line-height:1.8;max-width:560px}
+    .vision-card{border-top:1px solid rgba(255,255,255,.35);padding-top:24px;margin-bottom:38px}
+    .vision-card h3{font-size:22px}
+    .vision-card p{margin-top:10px}
+
+    /* quote */
+    .quote{text-align:center}
+    .quote-text{font-family:"Playfair Display",serif;font-size:clamp(35px,5vw,62px);line-height:1.15;max-width:900px;margin:28px auto}
+    .quote-author{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+
+    /* cta */
+    .cta{background:var(--ink);color:#fff;padding:45px 0}
+    .cta-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+    .cta h2{ font-size: clamp(32px, 4vw, 58px);;line-height:.88;letter-spacing:-.07em;max-width:850px}
+    .cta h2 em{font-family:"Playfair Display",serif;color:#f1b1b5}
+    .cta .btn{flex-shrink:0}
+
+    .cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.cta-content h2 {
+  margin: 0;
+}
+
+.contact-details {
+  display: flex;
+  gap: 55px;
+  align-items: flex-end;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .3s ease;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  opacity: .5;
+}
+
+.contact-value {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color .3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+}
+
+.contact-item:hover .contact-value {
+  color: #e3342f;
+}
+@media (max-width: 768px) {
+  .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .contact-details {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .contact-value {
+    white-space: normal;
+  }
+}
+
+    /* footer */
+    footer{background:#0e0e0e;color:#fff;padding:75px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:45px;padding-bottom:70px}
+    .footer-brand p{color:#888;max-width:320px;margin-top:20px;font-size:13px}
+    .footer h4{color:#f1b1b5;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+    .footer a{display:block;color:#999;font-size:13px;margin-bottom:10px;transition:.2s}
+    .footer a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;color:#666;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+
+    /* reveal */
+    .reveal{opacity:0;transform:translateY(35px);transition:.8s ease}
+    .reveal.show{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    @media(max-width:900px){
+      .container{width:min(100% - 32px,var(--max))}
+      .section{padding:90px 0}
+      .nav-links{position:fixed;right:0;top:0;height:100svh;width:min(320px,85%);background:#171717;flex-direction:column;align-items:flex-start;justify-content:center;padding:40px;transform:translateX(100%);transition:.4s}
+      .nav-links.open{transform:none}
+      .nav-links a{font-size:19px}
+      .menu{display:block;position:relative;z-index:5}
+      .hero-grid,.about-grid,.cap-grid,.emb-grid,.vision-grid{grid-template-columns:1fr;gap:45px}
+      .hero-content{padding-bottom:100px}
+      .hero-badge{display:none}
+      .about-image,.cap-image,.emb-image{height:500px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat:nth-child(2){border-right:0}
+      .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .section-head,.gallery-head{align-items:flex-start;flex-direction:column}
+      .service{grid-template-columns:45px 1fr 45px}
+      .service-desc{display:none}
+      .gallery{grid-template-columns:1fr}
+      .gallery-item,.gallery-item:nth-child(n){grid-column:span 1;height:450px}
+      .cta-inner{flex-direction:column;align-items:flex-start}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:600px){
+      .hero-title{font-size:59px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat{padding:25px 12px}
+      .stat-number{font-size:36px}
+      .process-card{width:310px;height:450px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;gap:10px}
+    }
+    /* partners */
+
+.partners{
+  padding:55px 0 0;
+  background:var(--paper);
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.partners-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:50px;
+  margin-bottom:45px;
+}
+
+.partners-head h2{
+  font-size:clamp(42px,5vw,68px);
+  line-height:1;
+  letter-spacing:-.055em;
+  font-weight:600;
+}
+
+.partners-intro{
+  max-width:350px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Logo marquee */
+
+.partners-marquee{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  padding-bottom:0;
+}
+
+.partners-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  animation:partnersMarquee 35s linear infinite;
+}
+
+.partner-logo{
+  width:190px;
+  height:120px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px 35px;
+}
+
+.partner-logo img{
+  width:100%;
+  height:65px;
+  object-fit:contain;
+
+  /* Keep original logo colors */
+  filter:none;
+  opacity:1;
+
+  transition:transform .3s ease;
+}
+
+.partner-logo:hover img{
+  transform:scale(1.08);
+}
+
+@keyframes partnersMarquee{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+.partners-marquee:hover .partners-track{
+  animation-play-state:paused;
+}
+
+@media(max-width:600px){
+
+  .partners{
+    padding:70px 0;
+  }
+
+  .partners-head{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:35px;
+  }
+
+  .partner-logo{
+    width:150px;
+    height:100px;
+    padding:20px;
+  }
+
+  .partner-logo img{
+    height:55px;
+  }
+}
+.partners{
+  padding:55px 0;
+  background:var(--paper);
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.about-image{
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.image-corner{
+  position:absolute;
+  top:0;
+  right:0;
+  width:110px;
+  height:110px;
+  background:var(--red);
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.15em;
+
+  z-index:2;
+}
+
+.image-corner span{
+  transform:rotate(90deg);
+}
+/* =========================================
+   PREMIUM GALLERY HOVER EFFECT
+========================================= */
+
+/* Smooth image movement */
+.gallery-item img {
+  transition: transform .8s cubic-bezier(.16,1,.3,1);
+}
+
+/* Dark overlay */
+.gallery-item::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.82) 0%,
+    rgba(0,0,0,.35) 45%,
+    rgba(0,0,0,.05) 100%
+  );
+
+  transition: background .5s ease;
+}
+
+/* Gallery information animation */
+.gallery-info {
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+
+/* Title animation */
+.gallery-info h3 {
+  transition: color .35s ease;
+}
+
+/* Arrow animation */
+.gallery-info > span {
+  display: inline-block;
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+
+/* Hover effects */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.92) 0%,
+    rgba(0,0,0,.45) 55%,
+    rgba(0,0,0,.12) 100%
+  );
+}
+
+/* Text moves upward */
+.gallery-item:hover .gallery-info {
+  transform: translateY(-10px);
+}
+
+/* Title changes to A&E red */
+.gallery-item:hover .gallery-info h3 {
+  color: #f1b1b5;
+}
+
+/* Arrow moves up and right */
+.gallery-item:hover .gallery-info > span {
+  transform: translate(3px, -3px);
+}
+.back-to-home {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10%;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease,
+    transform .3s ease,
+    background .3s ease;
+  
+  z-index: 9999;
+}
+
+.back-to-home.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-home:hover {
+  background: #e3342f;
+  border-color: #e3342f;
+  transform: translateY(-3px);
+}
+  </style>
+</head>
+
+<body>
+<button class="back-to-home" id="backToHome" aria-label="Back to home">
+  ↑
+</button>
+  <div class="loader" id="loader">
+  <div class="loader-content">
+
+    <div class="loader-logo-wrap">
+      <div class="loader-ring ring-one"></div>
+      <div class="loader-ring ring-two"></div>
+
+      <img
+        src="A&E logo.png"
+        alt="A&E Garment Logo"
+        class="loader-logo"
+      />
+    </div>
+
+
+    <div class="loader-sub">
+      GARMENT • EMBROIDERY • TECHNOLOGY
+    </div>
+
+    <div class="loader-progress">
+      <span></span>
+    </div>
+
+    <div class="loader-percent">
+      <span id="loaderPercent">0</span>%
+    </div>
+
+  </div>
+</div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">
+  <img src="A&E logo.png" alt="A&E Garment Logo" class="logo-img">
+</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#process">Process</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact" class="nav-cta">Contact A&E </a>
+      </nav>
+
+      <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-slide active">
+    <img src="hero-1.avif" alt="">
+  </div>
+
+  <div class="hero-slide">
+    <img src="hero-2.avif" alt="">
+  </div>
+
+  <div class="hero-slide">
+    <img src="hero-5.jpg" alt="">
+  </div>
+
+  <div class="hero-slide">
+    <img src="hero-4.jpg" alt="">
+  </div>
+      </div>
+      <div class="hero-content">
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-kicker reveal">A&E Garment and Advertising and Technology P.L.C.</div>
+            <h1 class="hero-title reveal d1">
+              Made with<br>
+              <em>precision.</em>
+            </h1>
+          </div>
+
+          <div>
+            <p class="hero-copy reveal d2">
+              Professional garment manufacturing and embroidery solutions
+              for institutions, organizations and businesses — built around
+              quality, experience and customer value.
+            </p>
+            <div class="actions reveal d3">
+              <a href="#services" class="btn btn-primary">Explore services</a>
+              <a href="#contact" class="btn">Talk to A&E</a>
+            </div>
+            <div class="hero-badge reveal d3" style="margin-top:28px">
+              <strong>Since 2015</strong>
+              Addis Ababa, Ethiopia
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll">Scroll<i></i></div>
+    </section>
+
+    <div class="marquee">
+  <div class="track">
+    
+    <span>Garment Manufacturing</span><b>✦</b>
+    <span>Embroidery</span><b>✦</b>
+    <span>Professional Service</span><b>✦</b>
+    <span>Quality & Value</span><b>✦</b>
+    <span>Custom Garments</span><b>✦</b>
+    <span>Institutional Solutions</span><b>✦</b>
+    <span>Creative Design</span><b>✦</b>
+    <span>Precision & Craftsmanship</span><b>✦</b>
+    <span>Made in Ethiopia</span><b>✦</b>
+
+    <!-- Duplicate for seamless scrolling -->
+    
+    <span>Garment Manufacturing</span><b>✦</b>
+    <span>Embroidery</span><b>✦</b>
+    <span>Professional Service</span><b>✦</b>
+    <span>Quality & Value</span><b>✦</b>
+    <span>Custom Garments</span><b>✦</b>
+    <span>Institutional Solutions</span><b>✦</b>
+    <span>Creative Design</span><b>✦</b>
+    <span>Precision & Craftsmanship</span><b>✦</b>
+    <span>Made in Ethiopia</span><b>✦</b>
+
+  </div>
+</div>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="container">
+    <div class="partners-head">
+      <div>
+        <div class="eyebrow">Trusted by</div>
+        <h2>Our <span class="serif">partners.</span></h2>
+      </div>
+
+      <p class="partners-intro">
+        Proud to work with organizations and businesses across Ethiopia.
+      </p>
+    </div>
+  </div>
+
+  <div class="partners-marquee">
+    <div class="partners-track">
+
+      <div class="partner-logo">
+        <img src="partner-1.png" alt="Partner 1">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-2.png" alt="Partner 2">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-3.png" alt="Partner 3">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-4.png" alt="Partner 4">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-5.png" alt="Partner 5">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-6.png" alt="Partner 6">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-7.png" alt="Partner 7">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-8.png" alt="Partner 8">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-9.png" alt="Partner 9">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-10.png" alt="Partner 10">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-11.png" alt="Partner 11">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-12.png" alt="Partner 12">
+      </div>
+
+      <!-- Duplicate for seamless loop -->
+
+      <div class="partner-logo">
+        <img src="partner-1.png" alt="Partner 1">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-2.png" alt="Partner 2">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-3.png" alt="Partner 3">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-4.png" alt="Partner 4">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-5.png" alt="Partner 5">
+      </div>
+
+      <div class="partner-logo">
+        <img src="partner-6.png" alt="Partner 6">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal">
+  <img src="company background.jpg" alt="Garment production">
+
+  <div class="image-corner">
+    <span>A&E</span>
+  </div>
+
+  <div class="image-tag">Production • Addis Ababa</div>
+</div>
+
+          <div class="about-copy">
+            <div class="eyebrow reveal">Company background</div>
+            <h2 class="title reveal d1">Experience that turns <span class="serif">ideas</span> into garments.</h2>
+            <p class="reveal d2">
+              A&E Garment and Advertising and Technology P.L.C. was established
+              in June 2015 as a garment company specializing in professional
+              services for governmental institutions, non-governmental
+              organizations and society at large.
+            </p>
+            <p class="reveal d2">
+              The company combines garment production, embroidery and
+              industry experience to deliver practical solutions and lasting
+              value to its clients.
+            </p>
+            <a class="link reveal d3" href="#contact">Work with A&E </a>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat-number"><span data-count="2015">0</span></div>
+            <div class="stat-label">Established</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><span data-count="52">0</span></div>
+            <div class="stat-label">Total employees</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><span data-count="40">0</span></div>
+            <div class="stat-label">Production workers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number"><span data-count="10">0</span>+</div>
+            <div class="stat-label">Years of experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal">What we do</div>
+            <h2 class="title reveal d1">Garment solutions built for <span class="serif">real needs.</span></h2>
+          </div>
+          <p class="intro reveal d2">
+            From production and embroidery to garment development,
+            A&E provides practical, professional and value-focused services.
+          </p>
+        </div>
+
+        <div class="service reveal"
+style="--service-image:url('hero-4.jpg')">
+
+  <div class="service-no">01</div>
+
+  <div class="service-name">
+    Garment Manufacturing
+  </div>
+
+  <div class="service-desc">
+    Professional garment production for organizations,
+    institutions and businesses.
+  </div>
+
+  <div class="service-arrow">↗</div>
+
+</div>
+          <div class="service reveal"
+style="--service-image:url('hero-5.jpg')">
+
+  <div class="service-no">02</div>
+
+  <div class="service-name">
+    Embroidery
+  </div>
+
+  <div class="service-desc">
+    Needle-and-thread decoration for caps, shirts,
+    coats, denim, blankets and other garments.
+  </div>
+
+  <div class="service-arrow">↗</div>
+
+</div>
+          <div class="service reveal"
+style="--service-image:url('hero-3.jpg')">
+
+  <div class="service-no">03</div>
+
+  <div class="service-name">
+    Garment Development
+  </div>
+
+  <div class="service-desc">
+    Designing, supplying and implementing garment-based
+    solutions around client requirements.
+  </div>
+
+  <div class="service-arrow">↗</div>
+
+</div>
+          <div class="service reveal"
+style="--service-image:url('hero-2.avif')">
+
+  <div class="service-no">04</div>
+
+  <div class="service-name">
+    Institutional Solutions
+  </div>
+
+  <div class="service-desc">
+    Supporting governmental and non-governmental organizations
+    with company-based and industrial services.
+  </div>
+
+  <div class="service-arrow">↗</div>
+
+</div>
+          <div class="service reveal"
+style="--service-image:url('hero-1.jpg')">
+
+  <div class="service-no">05</div>
+
+  <div class="service-name">
+    Design & Communication
+  </div>
+
+  <div class="service-desc">
+    Practical design, marketing and communication support
+    connected to garment and advertising needs.
+  </div>
+
+  <div class="service-arrow"></div>
+
+</div>
+    </section>
+
+    <section class="section capability" id="capabilities">
+      <div class="container cap-grid">
+        <div class="cap-image reveal">
+  <img src="employers.png" alt="Garment factory workers">
+
+  <div class="cap-corner">
+    <span>A&amp;E</span>
+  </div>
+</div>
+
+        <div class="cap-copy">
+          <div class="eyebrow reveal">Our organization</div>
+          <h2 class="title reveal d1">People behind the <span class="serif">production.</span></h2>
+          <p class="reveal d2">
+            A&E has a full-time and part-time team with professionals and
+            trained workers. The garment and embroidery sections are equipped
+            with the necessary accessories, tools and utilities to get the job done.
+          </p>
+
+          <div class="cap-list reveal d3">
+            <div class="cap-item"><strong>52 employees</strong><span>Total team</span></div>
+            <div class="cap-item"><strong>40 production workers</strong><span>Production team</span></div>
+            <div class="cap-item"><strong>12 support staff</strong><span>Management & support</span></div>
+            <div class="cap-item"><strong>Continuous training</strong><span>Skill development</span></div>
+            <div class="cap-item"><strong>Garment + embroidery</strong><span>Core capabilities</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-wrap" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal">How we work</div>
+            <h2 class="title reveal d1">From requirement to <span class="serif">finished work.</span></h2>
+          </div>
+          <p class="intro reveal d2">From concept to completion.</p>
+        </div>
+      </div>
+
+      <div class="process-scroll" id="processScroll">
+        <div class="process-track">
+          <article class="process-card">
+            <img src="requirement.png" alt="Design and planning">
+            <div class="process-info"><div class="process-no">01 / 05</div><h3 class="process-title">Requirement</h3><p>We understand the client's garment, quantity, purpose and specifications.</p></div>
+          </article>
+          <article class="process-card">
+            <img src="preparation.jpg" alt="Fabric selection">
+            <div class="process-info"><div class="process-no">02 / 05</div><h3 class="process-title">Preparation</h3><p>Materials, designs and production requirements are prepared for execution.</p></div>
+          </article>
+          <article class="process-card">
+            <img src="company background.jpg" alt="Garment cutting">
+            <div class="process-info"><div class="process-no">03 / 05</div><h3 class="process-title">Production</h3><p>Skilled production workers turn prepared materials into finished garments.</p></div>
+          </article>
+          <article class="process-card">
+            <img src="embroidery.jpg" alt="Garment finishing">
+            <div class="process-info"><div class="process-no">04 / 05</div><h3 class="process-title">Embroidery & Finish</h3><p>Branding, embroidery and finishing details are applied according to requirements.</p></div>
+          </article>
+          <article class="process-card">
+            <img src="delivery.jpg" alt="Finished garments">
+            <div class="process-info"><div class="process-no">05 / 05</div><h3 class="process-title">Delivery</h3><p>Completed work is prepared for delivery with attention to client expectations.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section embroidery">
+      <div class="container emb-grid">
+        <div class="emb-copy">
+          <div class="eyebrow reveal">SPECIALIZED SERVICE</div>
+          <h2 class="title reveal d1">The detail is in the <span class="serif">stitch.</span></h2>
+          <p class="reveal d2">
+            Embroidery is one of A&E's key capabilities. It combines needle,
+            thread and careful execution to decorate and identify garments
+            according to buyer requirements.
+          </p>
+          <p class="reveal d2">
+            Common applications include caps, hats, coats, blankets, dress
+            shirts, denim, stockings and golf shirts.
+          </p>
+          <a href="#contact" class="link reveal d3">Discuss an embroidery project</a>
+        </div>
+        <div class="emb-image reveal">
+          <img src="Embroidery work.jpg" alt="Embroidery work">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="gallery-head">
+          <div>
+            <div class="eyebrow reveal">Production & work</div>
+            <h2 class="title reveal d1">Built for <span class="serif">different worlds.</span></h2>
+          </div>
+          <div class="filters reveal d2">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="garment">Garment</button>
+            <button class="filter" data-filter="embroidery">Embroidery</button>
+            <button class="filter" data-filter="team">Team</button>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <article class="gallery-item reveal" data-category="garment">
+            <img src="company background.jpg" alt="Garment work">
+            <div class="gallery-info"><div><small>Garment</small><h3>Production</h3></div><span></span></div>
+          </article>
+          <article class="gallery-item reveal d1" data-category="embroidery">
+            <img src="Preparation.jpg" alt="Textile work">
+            <div class="gallery-info"><div><small>Embroidery</small><h3>Detail</h3></div><span></span></div>
+          </article>
+          <article class="gallery-item reveal" data-category="team">
+            <img src="employers.png" alt="Professional team">
+            <div class="gallery-info"><div><small>People</small><h3>Our Team</h3></div><span></span></div>
+          </article>
+          <article class="gallery-item reveal d1" data-category="garment">
+            <img src="finshing.jpg" alt="Garment finishing">
+            <div class="gallery-info"><div><small>Garment</small><h3>Finishing</h3></div><span></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vision">
+      <div class="container vision-grid">
+        <div>
+          <div class="eyebrow reveal">Vision</div>
+          <h2 class="reveal d1">A reputable company with a standard of <span class="serif">excellence.</span></h2>
+          <p class="reveal d2">
+            A&E's vision is to become a highly performing and reputable private
+            company, setting a national and continental example of excellence
+            while integrating knowledge and skills to provide solutions to social
+            and public-service needs.
+          </p>
+        </div>
+
+        <div>
+          <div class="vision-card reveal">
+            <h3>Quality at a competitive price</h3>
+            <p>Deliver quality, state-of-the-art service while creating value for clients.</p>
+          </div>
+          <div class="vision-card reveal d1">
+            <h3>Industry development</h3>
+            <p>Contribute to the advancement of knowledge and garment industry capabilities.</p>
+          </div>
+          <div class="vision-card reveal d2">
+            <h3>Professional relationships</h3>
+            <p>Build strong customer relationships through practical and effective service.</p>
+          </div>
+          <div class="vision-card reveal d3">
+            <h3>Public & private service</h3>
+            <p>Serve governmental and non-governmental organizations through company-based and industrial services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote">
+      <div class="container">
+        <div class="eyebrow reveal" style="justify-content:center">A&E philosophy</div>
+        <blockquote class="quote-text reveal d1">
+          “Quality service, practical experience and lasting value for every client.”
+        </blockquote>
+        <div class="quote-author reveal d2">A&E Garment and Advertising and Technology P.L.C.</div>
+      </div>
+    </section>
+ <section class="section feedback" id="feedback">
+  <div class="container feedback-grid">
+
+    <!-- Left Side -->
+    <div class="feedback-intro reveal">
+      <div class="eyebrow">YOUR EXPERIENCE MATTERS</div>
+
+      <h2 class="title">
+        Tell us how<br>
+        we <span class="serif">did.</span>
+      </h2>
+
+      <p>
+        Your feedback helps A&E improve our services and deliver better
+        experiences for every client.
+      </p>
+
+      <div class="rating-box">
+        <span class="rating-label">RATE YOUR EXPERIENCE</span>
+
+        <div class="stars" id="starRating">
+          <button type="button" class="star" data-rating="1">★</button>
+          <button type="button" class="star" data-rating="2">★</button>
+          <button type="button" class="star" data-rating="3">★</button>
+          <button type="button" class="star" data-rating="4">★</button>
+          <button type="button" class="star" data-rating="5">★</button>
+        </div>
+
+        <p class="rating-text" id="ratingText">
+          Select a rating
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Right Side -->
+    <div class="feedback-form-wrap reveal d1">
+
+      <div class="form-heading">
+        <span>COMPLAINT & FEEDBACK</span>
+        <p>We're here to listen and improve.</p>
+      </div>
+
+<form class="feedback-form" id="feedbackForm"
+      action="https://formspree.io/f/xgaeewze"
+      method="POST">
+
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+<input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Subject</label>
+<input type="text" name="subject" placeholder="What is this about?" required>        </div>
+
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea name="message" placeholder="Tell us about your experience or complaint..." required></textarea>
+        </div>
+
+        <button type="submit" class="feedback-btn">
+          SEND FEEDBACK <span></span>
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+    <section class="cta" id="contact">
+     <div class="container cta-inner">
+  <div class="cta-content reveal">
+    <h2>Have a garment project?<br><em>Let's build it.</em></h2>
+  </div>
+
+  <div class="contact-details reveal d1">
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Addis+Ababa,+Ethiopia" 
+       class="contact-item" target="_blank">
+      <span class="contact-label">LOCATION</span>
+      <span class="contact-value">Addis Ababa, Ethiopia</span>
+    </a>
+
+    <a href="mailto:aegarmentadvert77@gmail.com" class="contact-item">
+      <span class="contact-label">EMAIL</span>
+      <span class="contact-value">aegarmentadvert77@gmail.com</span>
+    </a>
+
+    <a href="tel:+251XXXXXXXXX" class="contact-item">
+      <span class="contact-label">PHONE</span>
+      <span class="contact-value">+251 XX XXX XXXX</span>
+    </a>
+
+  </div>
+</div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#home"><img src="A&E logo.png" alt="A&E Garment Logo" class="logo-img"></span></a>
+          <p>
+            Professional garment manufacturing, embroidery and garment-based
+            solutions for organizations, institutions and businesses.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#work">Our Work</a>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="#services">Garment Manufacturing</a>
+          <a href="#services">Embroidery</a>
+          <a href="#services">Garment Development</a>
+          <a href="#services">Institutional Solutions</a>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:aegarmentadvert77@gmail.com">aegarmentadvert77@gmail.com</a>
+          <a href="#contact">Request a project discussion ↗</a>
+          <a href="#home">Addis Ababa, Ethiopia</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> A&E Garment</span>
+        <span>Garment • Embroidery • Professional Service</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loader
+    /* =========================================
+   PREMIUM LOADER
+========================================= */
+
+const loader = document.querySelector('.loader-progress');
+const percentage = document.querySelector('.loader-percent');
+
+let progress = 0;
+
+const loading = setInterval(() => {
+  progress++;
+
+  loader.style.width = progress + '%';
+  percentage.textContent = progress + '%';
+
+  if (progress >= 100) {
+    clearInterval(loading);
+
+    setTimeout(() => {
+      document.querySelector('.loader').classList.add('hide');
+    }, 500);
+  }
+}, 25);
+    // Navbar
+    const nav=document.getElementById("nav");
+    window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",window.scrollY>40));
+
+    // Mobile menu
+    const menu=document.getElementById("menu");
+    const navLinks=document.getElementById("navLinks");
+    menu.addEventListener("click",()=>{
+      navLinks.classList.toggle("open");
+      menu.textContent=navLinks.classList.contains("open")?"×":"☰";
+    });
+    document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
+      navLinks.classList.remove("open");
+      menu.textContent="☰";
+    }));
+
+    // Reveal animations
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:.12});
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    // Counters
+    const counterObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        entry.target.querySelectorAll("[data-count]").forEach(el=>{
+          const target=Number(el.dataset.count);
+          const start=performance.now();
+          const duration=1400;
+          const tick=time=>{
+            const p=Math.min((time-start)/duration,1);
+            const eased=1-Math.pow(1-p,3);
+            el.textContent=Math.floor(target*eased).toLocaleString();
+            if(p<1)requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+        counterObserver.unobserve(entry.target);
+      });
+    },{threshold:.45});
+    const stats=document.querySelector(".stats");
+    if(stats)counterObserver.observe(stats);
+
+    // Gallery filters
+    const filters=document.querySelectorAll(".filter");
+    const items=document.querySelectorAll(".gallery-item");
+    filters.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        filters.forEach(x=>x.classList.remove("active"));
+        btn.classList.add("active");
+        const filter=btn.dataset.filter;
+        items.forEach(item=>{
+          item.classList.toggle("hide",filter!=="all" && item.dataset.category!==filter);
+        });
+      });
+    });
+
+    // Drag-to-scroll process
+    const slider=document.getElementById("processScroll");
+    let down=false,startX=0,left=0;
+    slider.addEventListener("mousedown",e=>{
+      down=true;startX=e.pageX-slider.offsetLeft;left=slider.scrollLeft;
+      slider.style.cursor="grabbing";
+    });
+    ["mouseup","mouseleave"].forEach(type=>slider.addEventListener(type,()=>{
+      down=false;slider.style.cursor="grab";
+    }));
+    slider.addEventListener("mousemove",e=>{
+      if(!down)return;
+      e.preventDefault();
+      const x=e.pageX-slider.offsetLeft;
+      slider.scrollLeft=left-(x-startX)*1.5;
+    });
+   slider.addEventListener("wheel", (e) => {
+
+  const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+  const atStart = slider.scrollLeft <= 0;
+  const atEnd = slider.scrollLeft >= maxScroll - 2;
+
+  // Scrolling DOWN
+  if (e.deltaY > 0) {
+
+    // If horizontal journey is finished,
+    // allow the page to continue to the next section
+    if (atEnd) {
+      return;
+    }
+
+    e.preventDefault();
+
+    slider.scrollLeft += e.deltaY * 1.2;
+  }
+
+  // Scrolling UP
+  else if (e.deltaY < 0) {
+
+    // If we're at the beginning,
+    // allow normal page scrolling upward
+    if (atStart) {
+      return;
+    }
+
+    e.preventDefault();
+
+    slider.scrollLeft += e.deltaY * 1.2;
+  }
+
+}, { passive: false });
+
+    // Footer year
+    document.getElementById("year").textContent=new Date().getFullYear();
+
+    // Smooth anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener("click",e=>{
+        const id=a.getAttribute("href");
+        const target=document.querySelector(id);
+        if(!target)return;
+        e.preventDefault();
+        window.scrollTo({top:target.offsetTop-65,behavior:"smooth"});
+      });
+    });
+
+    // Hero Slider
+const heroSlides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+setInterval(() => {
+  heroSlides[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + 1) % heroSlides.length;
+
+  heroSlides[currentSlide].classList.add("active");
+}, 5000);
+/* =========================================
+   STAR RATING
+========================================= */
+
+const stars = document.querySelectorAll(".star");
+const ratingText = document.getElementById("ratingText");
+
+let selectedRating = 0;
+
+const ratingMessages = {
+  1: "Poor — we're sorry to hear that.",
+  2: "Fair — we can do better.",
+  3: "Good — thank you for your feedback!",
+  4: "Very Good — we're glad you enjoyed it!",
+  5: "Excellent — thank you for your support!"
+};
+
+stars.forEach((star) => {
+
+  star.addEventListener("mouseenter", () => {
+    const rating = Number(star.dataset.rating);
+
+    stars.forEach((item) => {
+      item.classList.toggle(
+        "active",
+        Number(item.dataset.rating) <= rating
+      );
+    });
+  });
+
+  star.addEventListener("click", () => {
+    selectedRating = Number(star.dataset.rating);
+
+    ratingText.textContent = ratingMessages[selectedRating];
+  });
+
+});
+
+
+document.getElementById("starRating").addEventListener("mouseleave", () => {
+
+  stars.forEach((star) => {
+    star.classList.toggle(
+      "active",
+      Number(star.dataset.rating) <= selectedRating
+    );
+  });
+
+});
+
+const backToHome = document.getElementById('backToHome');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToHome.classList.add('show');
+    } else {
+      backToHome.classList.remove('show');
+    }
+  });
+
+  backToHome.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+  });
+
+  window.addEventListener('load', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  });
+  </script>
+</body>
+</html>

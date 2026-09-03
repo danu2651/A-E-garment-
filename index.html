@@ -1438,6 +1438,57 @@
   border-color: #e3342f;
   transform: translateY(-3px);
 }
+.footer-bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: nowrap;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.developed-by {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1;
+
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.developed-by span,
+.developed-by a {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+.developed-by a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.developed-by a:hover {
+  color: var(--red);
+}
+
+.credit-divider {
+  margin: 0 5px;
+  color: var(--red);
+}
   </style>
 </head>
 
@@ -1578,7 +1629,7 @@
     <div class="partners-head">
       <div>
         <div class="eyebrow">Trusted by</div>
-        <h2>Our <span class="serif">partners.</span></h2>
+        <h2>Our <span class="serif">Clients.</span></h2>
       </div>
 
       <p class="partners-intro">
@@ -1705,11 +1756,11 @@
             <div class="stat-label">Established</div>
           </div>
           <div class="stat">
-            <div class="stat-number"><span data-count="320">0</span></div>
+            <div class="stat-number"><span data-count="340">0</span>+</div>
             <div class="stat-label">Total employees</div>
           </div>
           <div class="stat">
-            <div class="stat-number"><span data-count="40">0</span></div>
+            <div class="stat-number"><span data-count="320">0</span>+</div>
             <div class="stat-label">Production workers</div>
           </div>
           <div class="stat">
@@ -1840,9 +1891,9 @@ style="--service-image:url('hero-1.jpg')">
           </p>
 
           <div class="cap-list reveal d3">
-            <div class="cap-item"><strong>320 employees</strong><span>Total team</span></div>
-            <div class="cap-item"><strong>40 production workers</strong><span>Production team</span></div>
-            <div class="cap-item"><strong>12 support staff</strong><span>Management & support</span></div>
+            <div class="cap-item"><strong>340+ employees</strong><span>Total team</span></div>
+            <div class="cap-item"><strong>320+ production workers</strong><span>Production team</span></div>
+            <div class="cap-item"><strong>12+ support staff</strong><span>Management & support</span></div>
             <div class="cap-item"><strong>Continuous training</strong><span>Skill development</span></div>
             <div class="cap-item"><strong>Garment + embroidery</strong><span>Core capabilities</span></div>
           </div>
@@ -1868,7 +1919,7 @@ style="--service-image:url('hero-1.jpg')">
             <div class="process-info"><div class="process-no">01 / 05</div><h3 class="process-title">Requirement</h3><p>We understand the client's garment, quantity, purpose and specifications.</p></div>
           </article>
           <article class="process-card">
-            <img src="Preparation.jpg" alt="Fabric selection">
+            <img src="preparation.jpg" alt="Fabric selection">
             <div class="process-info"><div class="process-no">02 / 05</div><h3 class="process-title">Preparation</h3><p>Materials, designs and production requirements are prepared for execution.</p></div>
           </article>
           <article class="process-card">
@@ -2031,30 +2082,28 @@ style="--service-image:url('hero-1.jpg')">
         <p>We're here to listen and improve.</p>
       </div>
 
-<form class="feedback-form" id="feedbackForm"
-      action="https://formspree.io/f/xgaeewze"
-      method="POST">
-
+      <form class="feedback-form" id="feedbackForm">
 
         <div class="form-row">
           <div class="form-group">
             <label>Your Name</label>
-<input type="text" name="name" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" required>
           </div>
 
           <div class="form-group">
             <label>Email Address</label>
-<input type="email" name="email" placeholder="Enter your email" required>
+            <input type="email" placeholder="Enter your email" required>
           </div>
         </div>
 
         <div class="form-group">
           <label>Subject</label>
-<input type="text" name="subject" placeholder="What is this about?" required>        </div>
+          <input type="text" placeholder="What is this about?" required>
+        </div>
 
         <div class="form-group">
           <label>Your Message</label>
-          <textarea name="message" placeholder="Tell us about your experience or complaint..." required></textarea>
+          <textarea placeholder="Tell us about your experience or complaint..." required></textarea>
         </div>
 
         <button type="submit" class="feedback-btn">
@@ -2081,14 +2130,14 @@ style="--service-image:url('hero-1.jpg')">
       <span class="contact-value">Addis Ababa, Ethiopia</span>
     </a>
 
-    <a href="mailto:aegarmentadvert77@gmail.com" class="contact-item">
+    <a href="Contact@AEGarment.com" class="contact-item">
       <span class="contact-label">EMAIL</span>
-      <span class="contact-value">aegarmentadvert77@gmail.com</span>
+      <span class="contact-value">Contact@AEGarment.com</span>
     </a>
 
-    <a href="tel:+251XXXXXXXXX" class="contact-item">
+    <a href="tel:+251944718312" class="contact-item">
       <span class="contact-label">PHONE</span>
-      <span class="contact-value">+251 XX XXX XXXX</span>
+      <span class="contact-value">+251944718312</span>
     </a>
 
   </div>
@@ -2126,17 +2175,28 @@ style="--service-image:url('hero-1.jpg')">
 
         <div>
           <h4>Contact</h4>
-          <a href="mailto:aegarmentadvert77@gmail.com">aegarmentadvert77@gmail.com</a>
-          <a href="#contact">Request a project discussion ↗</a>
-          <a href="#home">Addis Ababa, Ethiopia</a>
+          <a href="Contact@AEGarment.com">Email Us</a>
+          <a href="#contact">Request a project discussion</a>
+          <a href="https://maps.app.goo.gl/bLMfspqRxexbp5YA8" target="_blank">Addis Ababa, Ethiopia</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span id="year"></span> A&E Garment</span>
-        <span>Garment • Embroidery • Professional Service</span>
-      </div>
-    </div>
+  <span>© <span id="year"></span> A&E Garment</span>
+
+  <span class="developed-by">
+    Designed by 
+    <a href="DESIGNER-CV-LINK" target="_blank">Yohannes M.</a>
+    <span class="credit-divider">•</span>
+    Developed by
+    <a href="https://portfolio-sage-three-43.vercel.app/" target="_blank">Daniel N.</a>,
+    <a href="NATHANIEL-CV-LINK" target="_blank">Nathaniel E.</a>,
+    <a href="RANIYA-CV-LINK" target="_blank">Raniya M.</a>,
+    <a href="KALEAB-CV-LINK" target="_blank">Kaleab</a>
+  </span>
+
+  <span>Garment • Embroidery • Professional Service</span>
+</div>
   </footer>
 
   <script>
